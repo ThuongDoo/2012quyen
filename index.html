@@ -178,7 +178,7 @@ h1 .name{
 
 <script>
 (function(){
-  // Tên người nhận: ?ten=Tên hoặc #ten=Tên, mặc định là Quyên
+  // Tên người nhận: ?ten=Tên, #ten=Tên hoặc /Tên, mặc định là Quyên
   function readName(){
     let n = "";
     try { n = new URLSearchParams(location.search).get("ten") || ""; } catch(e){}
@@ -186,6 +186,13 @@ h1 .name{
       try {
         const h = decodeURIComponent(location.hash.slice(1));
         n = h.startsWith("ten=") ? h.slice(4) : h;
+      } catch(e){}
+    }
+    // Dạng đường dẫn /Tên (vercel.json rewrite về index.html)
+    if (!n){
+      try {
+        const seg = decodeURIComponent(location.pathname.split("/").filter(Boolean)[0] || "");
+        if (seg && !/\.html?$/i.test(seg)) n = seg.replace(/[-_+]/g, " ");
       } catch(e){}
     }
     n = n.replace(/\s+/g, " ").trim().slice(0, 30);
