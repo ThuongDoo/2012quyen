@@ -1,656 +1,353 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Thiệp 20 tháng 10</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Pacifico&display=swap"
-    />
-    <style>
-      /* Layout: sticker-style stage — chunky outlined cards with offset shadows, a candy flower that pops open, floating stickers and confetti. Single deliberate candy look. */
-      :root {
-        --bg: #ffe3f1;
-        --bg-2: #e9dcff;
-        --ink: #2b1640;
-        --pink: #ff4f9a;
-        --lilac: #9b6bff;
-        --lemon: #ffd84d;
-        --mint: #5fe0c0;
-        --paper: #ffffff;
-        --f-display: "Baloo 2", "Arial Rounded MT Bold", system-ui, sans-serif;
-        --f-name: "Pacifico", "Brush Script MT", cursive;
-        color-scheme: light;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        min-height: 100%;
-      }
-      body {
-        background:
-          radial-gradient(
-            circle at 12% 18%,
-            rgba(255, 216, 77, 0.45) 0 60px,
-            transparent 61px
-          ),
-          radial-gradient(
-            circle at 88% 70%,
-            rgba(95, 224, 192, 0.4) 0 80px,
-            transparent 81px
-          ),
-          linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 100%) fixed,
-          var(--bg);
-        color: var(--ink);
-        font-family: var(--f-display);
-        font-size: 17px;
-        line-height: 1.5;
-        overflow-x: hidden;
-        -webkit-tap-highlight-color: transparent;
-      }
-      #sky {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-      }
-      .wrap {
-        position: relative;
-        z-index: 1;
-        max-width: 600px;
-        margin: 0 auto;
-        padding-left: max(16px, env(safe-area-inset-left, 0px));
-        padding-right: max(16px, env(safe-area-inset-right, 0px));
-        padding-block: 32px 56px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-        text-align: center;
-      }
-      .chip {
-        font-weight: 800;
-        font-size: 14px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        background: var(--lemon);
-        color: var(--ink);
-        border: 2.5px solid var(--ink);
-        border-radius: 999px;
-        padding: 4px 14px;
-        box-shadow: 3px 3px 0 var(--ink);
-        transform: rotate(-3deg);
-      }
-      h1 {
-        margin: 0;
-        font-weight: 800;
-        font-size: clamp(30px, 8vw, 50px);
-        line-height: 1.05;
-        text-wrap: balance;
-      }
-      h1 .name {
-        display: inline-block;
-        font-family: var(--f-name);
-        font-weight: 400;
-        color: var(--pink);
-        font-size: 1.35em;
-        line-height: 1.3;
-        transform: rotate(-4deg);
-        text-shadow: 3px 3px 0 var(--lemon);
-        animation: wiggle 2.6s ease-in-out infinite;
-      }
-      @keyframes wiggle {
-        0%,
-        100% {
-          transform: rotate(-4deg);
-        }
-        50% {
-          transform: rotate(3deg) scale(1.05);
-        }
-      }
-      .sub {
-        margin: 0;
-        font-weight: 600;
-        font-size: 17px;
-        max-width: 30ch;
-      }
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thiệp 20 tháng 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Pacifico&display=swap">
+<style>
+/* Layout: sticker-style stage — chunky outlined cards with offset shadows, a candy flower that pops open, floating stickers and confetti. Single deliberate candy look. */
+:root{
+  --bg:#ffe3f1;
+  --bg-2:#e9dcff;
+  --ink:#2b1640;
+  --pink:#ff4f9a;
+  --lilac:#9b6bff;
+  --lemon:#ffd84d;
+  --mint:#5fe0c0;
+  --paper:#ffffff;
+  --f-display:"Baloo 2", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --f-name:"Pacifico", "Brush Script MT", cursive;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,216,77,.45) 0 60px, transparent 61px),
+    radial-gradient(circle at 88% 70%, rgba(95,224,192,.4) 0 80px, transparent 81px),
+    linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 100%) fixed, var(--bg);
+  color:var(--ink);
+  font-family:var(--f-display);
+  font-size:17px;line-height:1.5;
+  overflow-x:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+#sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.wrap{
+  position:relative;z-index:1;max-width:600px;margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:32px 56px;
+  display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;
+}
+.chip{
+  font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--lemon);color:var(--ink);border:2.5px solid var(--ink);
+  border-radius:999px;padding:4px 14px;box-shadow:3px 3px 0 var(--ink);
+  transform:rotate(-3deg);
+}
+h1{
+  margin:0;font-weight:800;font-size:clamp(30px, 8vw, 50px);line-height:1.05;text-wrap:balance;
+}
+h1 .name{
+  display:inline-block;font-family:var(--f-name);font-weight:400;color:var(--pink);
+  font-size:1.35em;line-height:1.3;transform:rotate(-4deg);
+  text-shadow:3px 3px 0 var(--lemon);
+  animation:wiggle 2.6s ease-in-out infinite;
+}
+@keyframes wiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(3deg) scale(1.05)}}
+.sub{margin:0;font-weight:600;font-size:17px;max-width:30ch}
 
-      /* Flower */
-      .stage {
-        position: relative;
-        width: min(270px, 74vw);
-        aspect-ratio: 1;
-        max-width: 100%;
-        margin-top: 6px;
-      }
-      .flower {
-        all: unset;
-        cursor: pointer;
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-      }
-      .flower:focus-visible {
-        outline: 3px dashed var(--lilac);
-        outline-offset: 6px;
-      }
-      .petal {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 36%;
-        height: 46%;
-        margin-left: -18%;
-        margin-top: -46%;
-        transform-origin: 50% 100%;
-        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-        background: var(--c);
-        border: 2.5px solid var(--ink);
-        transform: rotate(var(--r)) scale(0.3) translateY(20%);
-        transition: transform 0.8s cubic-bezier(0.3, 1.6, 0.4, 1);
-        transition-delay: calc(var(--i) * 55ms);
-      }
-      .bloom .petal {
-        transform: rotate(var(--r)) scale(1) translateY(0);
-      }
-      .flower:not(.bloom) {
-        animation: bounce 1.4s ease-in-out infinite;
-      }
-      @keyframes bounce {
-        50% {
-          transform: translateY(-8px);
-        }
-      }
-      .core {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 30%;
-        height: 30%;
-        margin: -15% 0 0 -15%;
-        border-radius: 50%;
-        background: var(--lemon);
-        border: 2.5px solid var(--ink);
-        display: grid;
-        place-items: center;
-        font-size: clamp(18px, 5vw, 24px);
-        font-weight: 800;
-      }
-      .sticker {
-        position: absolute;
-        font-weight: 800;
-        font-size: 13px;
-        background: var(--paper);
-        color: var(--ink);
-        border: 2.5px solid var(--ink);
-        border-radius: 12px;
-        padding: 3px 10px;
-        box-shadow: 3px 3px 0 var(--ink);
-        pointer-events: none;
-        white-space: nowrap;
-      }
-      .s1 {
-        top: 2%;
-        left: -6%;
-        transform: rotate(-12deg);
-        background: var(--mint);
-      }
-      .s2 {
-        bottom: 6%;
-        right: -8%;
-        transform: rotate(10deg);
-        background: var(--lilac);
-        color: var(--paper);
-      }
-      .hint {
-        font-weight: 700;
-        font-size: 15px;
-        color: var(--lilac);
-        transition: opacity 0.3s;
-      }
-      .hint.gone {
-        opacity: 0;
-      }
+/* Flower */
+.stage{position:relative;width:min(270px, 74vw);aspect-ratio:1;max-width:100%;margin-top:6px}
+.flower{all:unset;cursor:pointer;position:absolute;inset:0;border-radius:50%}
+.flower:focus-visible{outline:3px dashed var(--lilac);outline-offset:6px}
+.petal{
+  position:absolute;left:50%;top:50%;
+  width:36%;height:46%;margin-left:-18%;margin-top:-46%;
+  transform-origin:50% 100%;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  background:var(--c);border:2.5px solid var(--ink);
+  transform:rotate(var(--r)) scale(.3) translateY(20%);
+  transition:transform .8s cubic-bezier(.3,1.6,.4,1);
+  transition-delay:calc(var(--i) * 55ms);
+}
+.bloom .petal{transform:rotate(var(--r)) scale(1) translateY(0)}
+.flower:not(.bloom){animation:bounce 1.4s ease-in-out infinite}
+@keyframes bounce{50%{transform:translateY(-8px)}}
+.core{
+  position:absolute;left:50%;top:50%;width:30%;height:30%;margin:-15% 0 0 -15%;border-radius:50%;
+  background:var(--lemon);border:2.5px solid var(--ink);
+  display:grid;place-items:center;font-size:clamp(18px,5vw,24px);font-weight:800;
+}
+.sticker{
+  position:absolute;font-weight:800;font-size:13px;background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:12px;padding:3px 10px;box-shadow:3px 3px 0 var(--ink);
+  pointer-events:none;white-space:nowrap;
+}
+.s1{top:2%;left:-6%;transform:rotate(-12deg);background:var(--mint)}
+.s2{bottom:6%;right:-8%;transform:rotate(10deg);background:var(--lilac);color:var(--paper)}
+.hint{font-weight:700;font-size:15px;color:var(--lilac);transition:opacity .3s}
+.hint.gone{opacity:0}
 
-      /* Wish card */
-      .card {
-        width: 100%;
-        background: var(--paper);
-        border: 3px solid var(--ink);
-        border-radius: 22px;
-        padding: 22px 20px 18px;
-        box-shadow: 7px 7px 0 var(--pink);
-        position: relative;
-      }
-      .card .label {
-        position: absolute;
-        top: -16px;
-        left: 50%;
-        transform: translateX(-50%) rotate(2deg);
-        background: var(--pink);
-        color: var(--paper);
-        border: 2.5px solid var(--ink);
-        border-radius: 999px;
-        padding: 2px 14px;
-        font-weight: 800;
-        font-size: 14px;
-        white-space: nowrap;
-      }
-      .wish {
-        font-weight: 700;
-        font-size: clamp(19px, 4.8vw, 23px);
-        line-height: 1.4;
-        margin: 10px auto 0;
-        max-width: 28ch;
-        text-wrap: balance;
-        min-height: 4.3em;
-        transition:
-          opacity 0.25s,
-          transform 0.35s cubic-bezier(0.3, 1.6, 0.4, 1);
-      }
-      .wish.out {
-        opacity: 0;
-        transform: scale(0.9) rotate(-2deg);
-      }
-      .meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-        gap: 10px;
-      }
-      .sign {
-        font-family: var(--f-name);
-        font-size: 20px;
-        color: var(--lilac);
-      }
-      .count {
-        font-size: 14px;
-        font-weight: 700;
-        font-variant-numeric: tabular-nums;
-        color: var(--lilac);
-      }
+/* Wish card */
+.card{
+  width:100%;background:var(--paper);border:3px solid var(--ink);border-radius:22px;
+  padding:22px 20px 18px;box-shadow:7px 7px 0 var(--pink);position:relative;
+}
+.card .label{
+  position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(2deg);
+  background:var(--pink);color:var(--paper);border:2.5px solid var(--ink);border-radius:999px;
+  padding:2px 14px;font-weight:800;font-size:14px;white-space:nowrap;
+}
+.wish{
+  font-weight:700;font-size:clamp(19px, 4.8vw, 23px);line-height:1.4;
+  margin:10px auto 0;max-width:28ch;text-wrap:balance;min-height:4.3em;
+  transition:opacity .25s, transform .35s cubic-bezier(.3,1.6,.4,1);
+}
+.wish.out{opacity:0;transform:scale(.9) rotate(-2deg)}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:10px}
+.sign{font-family:var(--f-name);font-size:20px;color:var(--lilac)}
+.count{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--lilac)}
 
-      .actions {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .btn {
-        font: inherit;
-        font-size: 16px;
-        font-weight: 800;
-        cursor: pointer;
-        color: var(--ink);
-        border: 2.5px solid var(--ink);
-        border-radius: 14px;
-        padding: 10px 20px;
-        background: var(--lemon);
-        box-shadow: 4px 4px 0 var(--ink);
-        transition:
-          transform 0.1s,
-          box-shadow 0.1s;
-      }
-      .btn.alt {
-        background: var(--mint);
-      }
-      .btn.love {
-        background: var(--pink);
-        color: var(--paper);
-      }
-      .btn:hover {
-        transform: translate(-1px, -1px);
-        box-shadow: 5px 5px 0 var(--ink);
-      }
-      .btn:active {
-        transform: translate(3px, 3px);
-        box-shadow: 1px 1px 0 var(--ink);
-      }
-      .btn:focus-visible {
-        outline: 3px solid var(--lilac);
-        outline-offset: 3px;
-      }
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{
+  font:inherit;font-size:16px;font-weight:800;cursor:pointer;color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:14px;padding:10px 20px;
+  background:var(--lemon);box-shadow:4px 4px 0 var(--ink);transition:transform .1s, box-shadow .1s;
+}
+.btn.alt{background:var(--mint)}
+.btn.love{background:var(--pink);color:var(--paper)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
 
-      .love-meter {
-        font-weight: 800;
-        font-size: 15px;
-        font-variant-numeric: tabular-nums;
-      }
-      .foot {
-        font-size: 14px;
-        font-weight: 600;
-        opacity: 0.75;
-        margin: 0;
-      }
-      .toast {
-        position: fixed;
-        left: 50%;
-        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-        transform: translate(-50%, 20px);
-        background: var(--ink);
-        color: var(--paper);
-        padding: 9px 18px;
-        border-radius: 14px;
-        font-weight: 700;
-        font-size: 15px;
-        opacity: 0;
-        transition: 0.3s;
-        z-index: 5;
-        pointer-events: none;
-      }
-      .toast.show {
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
+.love-meter{font-weight:800;font-size:15px;font-variant-numeric:tabular-nums}
+.foot{font-size:14px;font-weight:600;opacity:.75;margin:0}
+.toast{
+  position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom, 0px));transform:translate(-50%, 20px);
+  background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:14px;font-weight:700;font-size:15px;
+  opacity:0;transition:.3s;z-index:5;pointer-events:none;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 
-      @media (prefers-reduced-motion: reduce) {
-        .petal,
-        .wish {
-          transition: none !important;
-        }
-        h1 .name,
-        .flower {
-          animation: none !important;
-        }
-      }
-    </style>
-  </head>
-  <body style="margin: 0">
-    <canvas id="sky" aria-hidden="true"></canvas>
+@media (prefers-reduced-motion: reduce){
+  .petal,.wish{transition:none!important}
+  h1 .name,.flower{animation:none!important}
+}
+</style>
+</head>
+<body style="margin:0">
 
-    <main class="wrap">
-      <div class="chip">20/10 · Ngày của con gái</div>
-      <h1>Hello <span class="name">Quyên</span><br />Chúc mừng 20/10 nha!</h1>
-      <p class="sub">Có một bông hoa đang chờ Quyên bấm vào đó 👀</p>
+<canvas id="sky" aria-hidden="true"></canvas>
 
-      <div class="stage">
-        <button class="flower" id="flower" aria-label="Bấm để hoa nở"></button>
-        <span class="sticker s1">tặng Quyên</span>
-        <span class="sticker s2">bấm đi mà</span>
-      </div>
-      <div class="hint" id="hint">↑ bấm vào hoa nè</div>
+<main class="wrap">
+  <div class="chip">20/10 · Ngày của con gái</div>
+  <h1>Hello <span class="name"><span data-nm>Quyên</span></span><br>Chúc mừng 20/10 nha!</h1>
+  <p class="sub">Có một bông hoa đang chờ <span data-nm>Quyên</span> bấm vào đó 👀</p>
 
-      <section class="card" aria-live="polite">
-        <div class="label">Lời chúc cho Quyên</div>
-        <p class="wish" id="wish">
-          Hoa chưa nở thì lời chúc chưa ra đâu nha 🤫
-        </p>
-        <div class="meta">
-          <span class="sign">from bạn ✌</span>
-          <span class="count" id="count"></span>
-        </div>
-      </section>
+  <div class="stage">
+    <button class="flower" id="flower" aria-label="Bấm để hoa nở"></button>
+    <span class="sticker s1">tặng <span data-nm>Quyên</span></span>
+    <span class="sticker s2">bấm đi mà</span>
+  </div>
+  <div class="hint" id="hint">↑ bấm vào hoa nè</div>
 
-      <div class="actions">
-        <button class="btn" id="next">Lời chúc khác 🎲</button>
-        <button class="btn love" id="love">Thả tim 💗</button>
-        <button class="btn alt" id="copy">Copy lời chúc</button>
-      </div>
-      <div class="love-meter" id="meter">Đã nhận 0 trái tim</div>
+  <section class="card" aria-live="polite">
+    <div class="label">Lời chúc cho <span data-nm>Quyên</span></div>
+    <p class="wish" id="wish">Hoa chưa nở thì lời chúc chưa ra đâu nha 🤫</p>
+    <div class="meta">
+      <span class="sign">from bạn ✌</span>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
 
-      <p class="foot">Bấm đâu trên trang cũng có pháo hoa nhỏ ✨</p>
-    </main>
-    <div class="toast" id="toast" role="status"></div>
+  <div class="actions">
+    <button class="btn" id="next">Lời chúc khác 🎲</button>
+    <button class="btn love" id="love">Thả tim 💗</button>
+    <button class="btn alt" id="copy">Copy lời chúc</button>
+  </div>
+  <div class="love-meter" id="meter">Đã nhận 0 trái tim</div>
 
-    <script>
-      (function () {
-        const wishes = [
-          "Chúc Quyên 20/10 thật vui, xinh đẹp hết nấc và được tặng quà tới tấp 🎁",
-          "Mong Quyên lúc nào cũng tươi như hoa, cười tươi như nắng, deadline thì hiền như mèo 🐱",
-          "Chúc Quyên ăn hoài không mập, ngủ đủ giấc, trà sữa luôn full topping 🧋",
-          "Quyên cứ là chính mình thôi, vì vậy là đủ xịn rồi đó ✨",
-          "Chúc Quyên năm nay học gì giỏi nấy, làm gì cũng suôn, đi đâu cũng gặp người tốt 🍀",
-          "Chúc Quyên có thật nhiều chuyến đi vui, thật nhiều tấm ảnh đẹp và thật nhiều kỷ niệm đáng nhớ 📸",
-          "Mong Quyên luôn được yêu thương, được chiều chuộng, không chỉ hôm nay mà cả 365 ngày 💗",
-          "Chúc Quyên mãi mười tám, mãi rạng rỡ, mãi là phiên bản vui vẻ nhất của chính mình 🌈",
-        ];
-        const petalColors = [
-          "#ff4f9a",
-          "#9b6bff",
-          "#5fe0c0",
-          "#ffd84d",
-          "#ff8fc4",
-          "#7fd3ff",
-        ];
-        const faces = ["^_^", "♡", "✿", "˶ᵔᵕᵔ˶"];
+  <p class="foot">Bấm đâu trên trang cũng có pháo hoa nhỏ ✨</p>
+</main>
+<div class="toast" id="toast" role="status"></div>
 
-        const $ = (id) => document.getElementById(id);
-        const flower = $("flower"),
-          wishEl = $("wish");
-        let idx = Math.floor(Math.random() * wishes.length);
-        let bloomed = false,
-          hearts = 0;
+<script>
+(function(){
+  // Tên người nhận: ?ten=Tên hoặc #ten=Tên, mặc định là Quyên
+  function readName(){
+    let n = "";
+    try { n = new URLSearchParams(location.search).get("ten") || ""; } catch(e){}
+    if (!n && location.hash){
+      try {
+        const h = decodeURIComponent(location.hash.slice(1));
+        n = h.startsWith("ten=") ? h.slice(4) : h;
+      } catch(e){}
+    }
+    n = n.replace(/\s+/g, " ").trim().slice(0, 30);
+    return n || "Quyên";
+  }
+  const NAME = readName();
+  const f = s => s.split("{n}").join(NAME);
+  document.querySelectorAll("[data-nm]").forEach(el => el.textContent = NAME);
+  document.title = "Thiệp 20/10 tặng " + NAME;
+  const wishes = [
+    "Chúc {n} 20/10 thật vui, xinh đẹp hết nấc và được tặng quà tới tấp 🎁",
+    "Mong {n} lúc nào cũng tươi như hoa, cười tươi như nắng, deadline thì hiền như mèo 🐱",
+    "Chúc {n} ăn hoài không mập, ngủ đủ giấc, trà sữa luôn full topping 🧋",
+    "{n} cứ là chính mình thôi, vì vậy là đủ xịn rồi đó ✨",
+    "Chúc {n} năm nay học gì giỏi nấy, làm gì cũng suôn, đi đâu cũng gặp người tốt 🍀",
+    "Chúc {n} có thật nhiều chuyến đi vui, thật nhiều tấm ảnh đẹp và thật nhiều kỷ niệm đáng nhớ 📸",
+    "Mong {n} luôn được yêu thương, được chiều chuộng, không chỉ hôm nay mà cả 365 ngày 💗",
+    "Chúc {n} mãi mười tám, mãi rạng rỡ, mãi là phiên bản vui vẻ nhất của chính mình 🌈"
+  ];
+  const petalColors = ["#ff4f9a","#9b6bff","#5fe0c0","#ffd84d","#ff8fc4","#7fd3ff"];
+  const faces = ["^_^","♡","✿","˶ᵔᵕᵔ˶"];
 
-        const N = 8;
-        for (let i = 0; i < N; i++) {
-          const p = document.createElement("span");
-          p.className = "petal";
-          p.style.setProperty("--r", (i * 360) / N + "deg");
-          p.style.setProperty("--i", i);
-          p.style.setProperty("--c", petalColors[i % petalColors.length]);
-          flower.appendChild(p);
-        }
-        const core = document.createElement("div");
-        core.className = "core";
-        core.textContent = "?";
-        flower.appendChild(core);
+  const $ = id => document.getElementById(id);
+  const flower = $("flower"), wishEl = $("wish");
+  let idx = Math.floor(Math.random() * wishes.length);
+  let bloomed = false, hearts = 0;
 
-        function showWish() {
-          wishEl.classList.add("out");
-          setTimeout(() => {
-            wishEl.textContent = wishes[idx];
-            $("count").textContent = idx + 1 + "/" + wishes.length;
-            wishEl.classList.remove("out");
-          }, 220);
-        }
-        function center(el) {
-          const r = el.getBoundingClientRect();
-          return [r.left + r.width / 2, r.top + r.height / 2];
-        }
+  const N = 8;
+  for (let i = 0; i < N; i++){
+    const p = document.createElement("span");
+    p.className = "petal";
+    p.style.setProperty("--r", (i * 360 / N) + "deg");
+    p.style.setProperty("--i", i);
+    p.style.setProperty("--c", petalColors[i % petalColors.length]);
+    flower.appendChild(p);
+  }
+  const core = document.createElement("div"); core.className = "core"; core.textContent = "?"; flower.appendChild(core);
 
-        flower.addEventListener("click", (e) => {
-          e.stopPropagation();
-          if (!bloomed) {
-            bloomed = true;
-            flower.classList.add("bloom");
-            $("hint").classList.add("gone");
-            flower.setAttribute("aria-label", "Hoa đã nở. Bấm để đổi lời chúc");
-            core.textContent = faces[0];
-            showWish();
-            burst(...center(flower), 60);
-            toast("Tèn ten! Hoa nở rồi Quyên ơi 🌸");
-          } else {
-            idx = (idx + 1) % wishes.length;
-            showWish();
-            core.textContent = faces[idx % faces.length];
-            burst(...center(flower), 18);
-          }
-        });
+  function showWish(){
+    wishEl.classList.add("out");
+    setTimeout(() => {
+      wishEl.textContent = f(wishes[idx]);
+      $("count").textContent = (idx + 1) + "/" + wishes.length;
+      wishEl.classList.remove("out");
+    }, 220);
+  }
+  function center(el){ const r = el.getBoundingClientRect(); return [r.left + r.width/2, r.top + r.height/2]; }
 
-        $("next").addEventListener("click", (e) => {
-          e.stopPropagation();
-          if (!bloomed) {
-            flower.click();
-            return;
-          }
-          idx = (idx + 1) % wishes.length;
-          showWish();
-          core.textContent = faces[idx % faces.length];
-          burst(...center(e.currentTarget), 14);
-        });
+  flower.addEventListener("click", e => {
+    e.stopPropagation();
+    if (!bloomed){
+      bloomed = true;
+      flower.classList.add("bloom");
+      $("hint").classList.add("gone");
+      flower.setAttribute("aria-label", "Hoa đã nở. Bấm để đổi lời chúc");
+      core.textContent = faces[0];
+      showWish();
+      burst(...center(flower), 60);
+      toast("Tèn ten! Hoa nở rồi {n} ơi 🌸");
+    } else {
+      idx = (idx + 1) % wishes.length; showWish();
+      core.textContent = faces[idx % faces.length];
+      burst(...center(flower), 18);
+    }
+  });
 
-        $("love").addEventListener("click", (e) => {
-          e.stopPropagation();
-          hearts++;
-          $("meter").textContent = "Đã nhận " + hearts + " trái tim";
-          burst(...center(e.currentTarget), 16, true);
-          if (hearts === 10) toast("10 tim luôn! Quyên được thương ghê 💞");
-          if (hearts === 20) toast("20 tim, tới công chuyện rồi 😆");
-        });
+  $("next").addEventListener("click", e => {
+    e.stopPropagation();
+    if (!bloomed){ flower.click(); return; }
+    idx = (idx + 1) % wishes.length; showWish();
+    core.textContent = faces[idx % faces.length];
+    burst(...center(e.currentTarget), 14);
+  });
 
-        $("copy").addEventListener("click", (e) => {
-          e.stopPropagation();
-          if (!bloomed) {
-            toast("Bấm cho hoa nở trước đã nha");
-            return;
-          }
-          const text = wishes[idx] + " Happy 20/10 Quyên!";
-          const fallback = () => {
-            const range = document.createRange();
-            range.selectNodeContents(wishEl);
-            const sel = getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-            toast("Đã bôi đen sẵn, bấm copy nhé");
-          };
-          try {
-            navigator.clipboard
-              .writeText(text)
-              .then(() => toast("Copy xong rồi ✅"), fallback);
-          } catch (err) {
-            fallback();
-          }
-        });
+  $("love").addEventListener("click", e => {
+    e.stopPropagation();
+    hearts++;
+    $("meter").textContent = "Đã nhận " + hearts + " trái tim";
+    burst(...center(e.currentTarget), 16, true);
+    if (hearts === 10) toast("10 tim luôn! {n} được thương ghê 💞");
+    if (hearts === 20) toast("20 tim, tới công chuyện rồi 😆");
+  });
 
-        let tt;
-        function toast(msg) {
-          const t = $("toast");
-          t.textContent = msg;
-          t.classList.add("show");
-          clearTimeout(tt);
-          tt = setTimeout(() => t.classList.remove("show"), 1900);
-        }
+  $("copy").addEventListener("click", e => {
+    e.stopPropagation();
+    if (!bloomed){ toast("Bấm cho hoa nở trước đã nha"); return; }
+    const text = f(wishes[idx] + " Happy 20/10 {n}!");
+    const fallback = () => {
+      const range = document.createRange(); range.selectNodeContents(wishEl);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      toast("Đã bôi đen sẵn, bấm copy nhé");
+    };
+    try { navigator.clipboard.writeText(text).then(() => toast("Copy xong rồi ✅"), fallback); }
+    catch(err){ fallback(); }
+  });
 
-        // Canvas: floating confetti + bursts
-        const cv = $("sky"),
-          ctx = cv.getContext("2d");
-        const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-        let W, H;
-        function size() {
-          const dpr = Math.min(devicePixelRatio || 1, 2);
-          W = innerWidth;
-          H = innerHeight;
-          cv.width = W * dpr;
-          cv.height = H * dpr;
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        }
-        size();
-        addEventListener("resize", size);
+  let tt;
+  function toast(msg){
+    const t = $("toast"); t.textContent = f(msg); t.classList.add("show");
+    clearTimeout(tt); tt = setTimeout(() => t.classList.remove("show"), 1900);
+  }
 
-        const drift = [];
-        const count = reduce ? 0 : Math.round(Math.min(30, W / 20));
-        for (let i = 0; i < count; i++) drift.push(newDrift(true));
-        function newDrift(anywhere) {
-          return {
-            x: Math.random() * W,
-            y: anywhere ? Math.random() * H : -20,
-            s: 5 + Math.random() * 7,
-            vy: 0.35 + Math.random() * 0.7,
-            a: Math.random() * 6.28,
-            va: -0.03 + Math.random() * 0.06,
-            w: Math.random() * 6.28,
-            c: petalColors[(Math.random() * petalColors.length) | 0],
-            k: (Math.random() * 3) | 0,
-          };
-        }
-        const pops = [];
-        function burst(x, y, n, onlyHearts) {
-          if (reduce) return;
-          for (let i = 0; i < n; i++) {
-            const ang = Math.random() * 6.28,
-              sp = 2 + Math.random() * 5;
-            pops.push({
-              x,
-              y,
-              vx: Math.cos(ang) * sp,
-              vy: Math.sin(ang) * sp - 2.5,
-              life: 1,
-              s: 6 + Math.random() * 8,
-              k: onlyHearts ? 3 : (Math.random() * 4) | 0,
-              c: petalColors[(Math.random() * petalColors.length) | 0],
-              a: Math.random() * 6.28,
-            });
-          }
-        }
-        document.addEventListener("click", (e) => {
-          if (e.target.closest("button")) return;
-          burst(e.clientX, e.clientY, 14);
-        });
+  // Canvas: floating confetti + bursts
+  const cv = $("sky"), ctx = cv.getContext("2d");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let W, H;
+  function size(){
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  size(); addEventListener("resize", size);
 
-        function shape(k, s) {
-          ctx.beginPath();
-          if (k === 0) {
-            ctx.arc(0, 0, s * 0.5, 0, 6.28);
-          } else if (k === 1) {
-            ctx.rect(-s * 0.5, -s * 0.25, s, s * 0.5);
-          } else if (k === 2) {
-            for (let i = 0; i < 5; i++) {
-              const a = i * 1.2566 - 1.5708;
-              ctx.lineTo(Math.cos(a) * s * 0.6, Math.sin(a) * s * 0.6);
-              ctx.lineTo(
-                Math.cos(a + 0.628) * s * 0.25,
-                Math.sin(a + 0.628) * s * 0.25,
-              );
-            }
-            ctx.closePath();
-          } else {
-            ctx.moveTo(0, s * 0.35);
-            ctx.bezierCurveTo(-s, -s * 0.3, -s * 0.5, -s, 0, -s * 0.45);
-            ctx.bezierCurveTo(s * 0.5, -s, s, -s * 0.3, 0, s * 0.35);
-          }
-          ctx.fill();
-        }
-        function frame() {
-          ctx.clearRect(0, 0, W, H);
-          for (const p of drift) {
-            p.w += 0.02;
-            p.x += Math.sin(p.w) * 0.6;
-            p.y += p.vy;
-            p.a += p.va;
-            if (p.y > H + 20) Object.assign(p, newDrift(false));
-            ctx.save();
-            ctx.translate(p.x, p.y);
-            ctx.rotate(p.a);
-            ctx.globalAlpha = 0.6;
-            ctx.fillStyle = p.c;
-            shape(p.k, p.s);
-            ctx.restore();
-          }
-          for (let i = pops.length - 1; i >= 0; i--) {
-            const p = pops[i];
-            p.vy += 0.13;
-            p.x += p.vx;
-            p.y += p.vy;
-            p.vx *= 0.98;
-            p.life -= 0.015;
-            p.a += 0.08;
-            if (p.life <= 0) {
-              pops.splice(i, 1);
-              continue;
-            }
-            ctx.save();
-            ctx.translate(p.x, p.y);
-            ctx.rotate(p.k === 3 ? 0 : p.a);
-            ctx.globalAlpha = Math.max(0, p.life);
-            ctx.fillStyle = p.c;
-            shape(p.k, p.s);
-            ctx.restore();
-          }
-          requestAnimationFrame(frame);
-        }
-        requestAnimationFrame(frame);
-      })();
-    </script>
-  </body>
+  const drift = [];
+  const count = reduce ? 0 : Math.round(Math.min(30, W / 20));
+  for (let i = 0; i < count; i++) drift.push(newDrift(true));
+  function newDrift(anywhere){
+    return { x: Math.random()*W, y: anywhere ? Math.random()*H : -20,
+      s: 5 + Math.random()*7, vy: .35 + Math.random()*.7, a: Math.random()*6.28, va: -.03 + Math.random()*.06,
+      w: Math.random()*6.28, c: petalColors[(Math.random()*petalColors.length)|0], k: (Math.random()*3)|0 };
+  }
+  const pops = [];
+  function burst(x, y, n, onlyHearts){
+    if (reduce) return;
+    for (let i = 0; i < n; i++){
+      const ang = Math.random()*6.28, sp = 2 + Math.random()*5;
+      pops.push({ x, y, vx: Math.cos(ang)*sp, vy: Math.sin(ang)*sp - 2.5, life: 1,
+        s: 6 + Math.random()*8, k: onlyHearts ? 3 : (Math.random()*4)|0,
+        c: petalColors[(Math.random()*petalColors.length)|0], a: Math.random()*6.28 });
+    }
+  }
+  document.addEventListener("click", e => {
+    if (e.target.closest("button")) return;
+    burst(e.clientX, e.clientY, 14);
+  });
+
+  function shape(k, s){
+    ctx.beginPath();
+    if (k === 0){ ctx.arc(0, 0, s*.5, 0, 6.28); }
+    else if (k === 1){ ctx.rect(-s*.5, -s*.25, s, s*.5); }
+    else if (k === 2){ for (let i = 0; i < 5; i++){ const a = i*1.2566 - 1.5708; ctx.lineTo(Math.cos(a)*s*.6, Math.sin(a)*s*.6); ctx.lineTo(Math.cos(a+.628)*s*.25, Math.sin(a+.628)*s*.25); } ctx.closePath(); }
+    else { ctx.moveTo(0, s*.35); ctx.bezierCurveTo(-s, -s*.3, -s*.5, -s, 0, -s*.45); ctx.bezierCurveTo(s*.5, -s, s, -s*.3, 0, s*.35); }
+    ctx.fill();
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for (const p of drift){
+      p.w += .02; p.x += Math.sin(p.w)*.6; p.y += p.vy; p.a += p.va;
+      if (p.y > H + 20) Object.assign(p, newDrift(false));
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.globalAlpha = .6; ctx.fillStyle = p.c; shape(p.k, p.s); ctx.restore();
+    }
+    for (let i = pops.length - 1; i >= 0; i--){
+      const p = pops[i];
+      p.vy += .13; p.x += p.vx; p.y += p.vy; p.vx *= .98; p.life -= .015; p.a += .08;
+      if (p.life <= 0){ pops.splice(i,1); continue; }
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.k === 3 ? 0 : p.a);
+      ctx.globalAlpha = Math.max(0, p.life); ctx.fillStyle = p.c; shape(p.k, p.s); ctx.restore();
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
 </html>
